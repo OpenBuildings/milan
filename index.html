@@ -25,12 +25,12 @@
                      
                      <!--- This is a list item -->
                      <li>
-                        <a href="#">
+                        <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">
                            <div class="pull-left image">
                               <img src="https://res.cloudinary.com/clippings/image/upload/t_big/f_auto/v1523269678/layout_item_banners/clippings-10026271.jpg">
                            </div>
                            <div class="pull-left text">
-                              <h3>Lee Broom's Observatory</h3>
+                              <h3><span>1</span> Lee Broom's Observatory</h3>
                               <p>The London designer always brings a punchy themed presentation to Milan and this year he shows off four new collections inspired by celestial bodies.</p>
                               <span>↪ Get directions</span>
                            </div>
@@ -39,12 +39,12 @@
                      <!--- end of list item --->
                      <!--- This is a list item -->
                      <li>
-                        <a href="#">
+                        <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">
                            <div class="pull-left image">
                               <img src="https://res.cloudinary.com/clippings/image/upload/t_big/f_auto/v1523269596/layout_item_banners/clippings-10026261.jpg">
                            </div>
                            <div class="pull-left text">
-                              <h3>Something Else</h3>
+                              <h3><span>2</span> Something Else</h3>
                               <p>Material Immaterial Exhibition by American Hardwood Export Council</p>
                               <span>↪ Get directions</span>
                            </div>
@@ -53,12 +53,12 @@
                      <!--- end of list item --->
                      <!--- This is a list item -->
                      <li>
-                        <a href="#">
+                        <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">
                            <div class="pull-left image">
                               <img src="https://res.cloudinary.com/clippings/image/upload/t_big/f_auto/v1523269783/layout_item_banners/clippings-10026251.jpg">
                            </div>
                            <div class="pull-left text">
-                              <h3>Another Thing</h3>
+                              <h3><span>3</span> Another Thing</h3>
                               <p>Material Immaterial Exhibition by American Hardwood Export Council</p>
                               <span>↪ Get directions</span>
                            </div>
@@ -236,8 +236,8 @@
             border: 0;
             z-index: 0;
             margin-top: -46px;
-            /* filter: grayscale(100%); */
-            mix-blend-mode: multiply;
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
          }
          
          @media (min-width: 992px) {
@@ -310,6 +310,22 @@
          
          .pins>li>a>.text>h3 {
             margin-top:0;
+         }
+         
+         .pins>li>a>.text>h3>span {
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 22px;
+            font-size: 12px;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+            background: black;
+            color: white;
+            position: relative;
+            top: -4px;
+            margin-right: 3px;
          }
          
          .pins>li>a>.text>p {
