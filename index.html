@@ -79,7 +79,7 @@
                
             </section>
             
-            <form action="https://clippings.us1.list-manage.com/subscribe/post?u=f4f408c9c47bcd189e68f6f90&amp;id=759a7aff1b&amp;" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter" target="_blank" validate>
+            <form action="https://clippings.us1.list-manage.com/subscribe/post-json?u=f4f408c9c47bcd189e68f6f90&amp;id=759a7aff1b&amp;c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter" target="_blank" validate>
                <a class="logo" target="_blank" title="Clippings" href="https://clippings.com/trade">
                <svg width="139px" height="31px" viewBox="0 0 139 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                    <defs></defs>
@@ -93,6 +93,8 @@
          	   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f4f408c9c47bcd189e68f6f90_759a7aff1b" tabindex="-1" value=""></div>
                <input type="submit" value="Send me the report" name="subscribe" id="mc-embedded-subscribe" class="button">
+               
+               <p class="large success">You're on the list 👍</p>
 
             </form>
             
@@ -247,6 +249,16 @@
             padding: 0 30px;
          }
          
+         form.newsletter .success {
+            display: none;
+            background: rgba(255,255,255,0.1);
+            height: 50px;
+            line-height: 50px;
+            border-radius: 2px;
+            margin-top: 5px;
+            text-align: center;
+         }
+         
          section#map {
             padding-left:0;
             padding-right:0;
@@ -383,5 +395,27 @@
          }
          
       </style>
+      
+      <script>
+         jQuery("#mc-embedded-subscribe-form").submit(function(e) {
+          
+             var url = jQuery(this).prop('action'); // the script where you handle the form input.
+             jQuery.ajax({
+                    type: "GET",
+                    url: url,
+                    data: jQuery("#mc-embedded-subscribe-form").serialize(), // serializes the form's elements.
+                    dataType: "jsonp",
+                    success: function(data)
+                    {
+                         if(data.result == 'success') {
+                           $('.newsletter input').hide();
+                           $('.newsletter .success').show();
+                         }
+                    }
+                  });
+          
+             e.preventDefault(); // avoid to execute the actual submit of the form.
+         });
+      </script>
 
 </html>
