@@ -16,7 +16,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: for i in {1..2}; do IP="$SERVER{$i}_IP" ssh -t clippings@$IP -i .travis/id_rsa "cd $DEPLOY_DIR && git fetch --depth=5 && git reset --hard $TRAVIS_COMMIT"; done
+  script: .travis/deploy.sh
   skip_cleanup: true
   on:
     repo: clippings/milan
