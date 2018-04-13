@@ -3,6 +3,7 @@
 set -e
 
 openssl aes-256-cbc -K $encrypted_c5c534c0fd9c_key -iv $encrypted_c5c534c0fd9c_iv -in .travis/id_rsa.enc -out .travis/id_rsa -d
+chmod 600 .travis/id_rsa
 
 echo $SERVER1_PUBLIC_KEY >> $HOME/.ssh/known_hosts
 echo $SERVER2_PUBLIC_KEY >> $HOME/.ssh/known_hosts
