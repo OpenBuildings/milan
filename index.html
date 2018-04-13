@@ -23,10 +23,11 @@
                      </svg>
                    </a>
                   <h1>Inside Guide<br/>Milan 2018</h1>
-                  <p>Introduction about what this is...</p>
+                  <p class="intro">Introduction about what this is...</p>
                   
                   <br>
                   <h2>24 hour guide</h2>
+                  <p>If you've only got one day...</p>
                   
                   <ul class="pins">
                      
@@ -44,6 +45,14 @@
                         </a>
                      </li>
                      <!--- end of list item --->
+                     
+                  </ul>
+                  
+                  <h2>Longer</h2>
+                  <p>If you have more time</p>
+                  
+                  <ul class="pins pink">
+                     
                      <!--- This is a list item -->
                      <li>
                         <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">
@@ -58,6 +67,14 @@
                         </a>
                      </li>
                      <!--- end of list item --->
+                     
+                  </ul>
+                  
+                  <h2>Even more time</h2>
+                  <p>If you have the whole week to kill</p>
+                  
+                  <ul class="pins white">
+                     
                      <!--- This is a list item -->
                      <li>
                         <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">
@@ -184,8 +201,13 @@
             transform: translateY(30px); opacity: 0;
          }
          
-         section#intro>div>p {
+         section#intro>div>p.intro {
             animation: fade-up 1s ease 0.5s forwards;
+            transform: translateY(30px); opacity: 0;
+         }
+         
+         section#intro>div>p {
+            animation: fade-up 1s ease 0.9s forwards;
             transform: translateY(30px); opacity: 0;
          }
          
@@ -300,6 +322,7 @@
          .pins {
             width: 100%;
             padding: 0;
+            margin-bottom: 40px;
             list-style: none;
             border-top: 1px solid #eee;
             animation: fade-up 1s ease 1s forwards;
@@ -367,12 +390,22 @@
             height: 20px;
             width: 20px;
             text-align: center;
-            box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
             background: black;
             color: white;
             position: relative;
             top: -4px;
             margin-right: 3px;
+         }
+         
+         .pins.pink>li>a>.text>h3>span {
+            background: #feebe9;
+            color: black;
+         }
+         
+         .pins.white>li>a>.text>h3>span {
+            background: white;
+            color: black;
          }
          
          .pins>li>a>.text>p {
