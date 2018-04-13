@@ -2,7 +2,7 @@
 
 set -e
 
-openssl aes-256-cbc -K $encrypted_c5c534c0fd9c_key -iv $encrypted_c5c534c0fd9c_iv -in ./id_rsa.enc -out ./id_rsa -d
+openssl aes-256-cbc -K $encrypted_c5c534c0fd9c_key -iv $encrypted_c5c534c0fd9c_iv -in .travis/id_rsa.enc -out .travis/id_rsa -d
 
 for i in {1..2}; do
     SERVER_IP_VAR_NAME=SERVER${i}_IP
