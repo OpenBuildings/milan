@@ -33,16 +33,16 @@
 
                      <!--- This is a list item -->
                      <li>
-                        <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">
+                        
                            <div class="pull-left image">
                               <img src="https://res.cloudinary.com/clippings/image/upload/t_big/f_auto/v1523269678/layout_item_banners/clippings-10026271.jpg">
                            </div>
                            <div class="pull-left text">
                               <h3><span>1</span> Lee Broom's Observatory</h3>
                               <p>The London designer always brings a punchy themed presentation to Milan and this year he shows off four new collections inspired by celestial bodies.</p>
-                              <span>Get directions</span>
+                              <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">Via Lovanio 6, Milano 20121 <span class="btn">Get directions</span></a>
                            </div>
-                        </a>
+                        
                      </li>
                      <!--- end of list item --->
 
@@ -53,20 +53,7 @@
 
                   <ul class="pins pink">
 
-                     <!--- This is a list item -->
-                     <li>
-                        <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">
-                           <div class="pull-left image">
-                              <img src="https://res.cloudinary.com/clippings/image/upload/t_big/f_auto/v1523269596/layout_item_banners/clippings-10026261.jpg">
-                           </div>
-                           <div class="pull-left text">
-                              <h3><span>2</span> Something Else</h3>
-                              <p>Material Immaterial Exhibition by American Hardwood Export Council</p>
-                              <span>Get directions</span>
-                           </div>
-                        </a>
-                     </li>
-                     <!--- end of list item --->
+                     
 
                   </ul>
 
@@ -75,20 +62,7 @@
 
                   <ul class="pins white">
 
-                     <!--- This is a list item -->
-                     <li>
-                        <a href="https://www.google.co.uk/maps/search/%09+Via+Lovanio+6,+Milano+2012/@45.4767028,9.1839909,17z/data=!3m1!4b1" target="_blank">
-                           <div class="pull-left image">
-                              <img src="https://res.cloudinary.com/clippings/image/upload/t_big/f_auto/v1523269783/layout_item_banners/clippings-10026251.jpg">
-                           </div>
-                           <div class="pull-left text">
-                              <h3><span>3</span> Another Thing</h3>
-                              <p>Material Immaterial Exhibition by American Hardwood Export Council</p>
-                              <span>Get directions</span>
-                           </div>
-                        </a>
-                     </li>
-                     <!--- end of list item --->
+                     
 
                   </ul>
 
@@ -339,50 +313,41 @@
             transition: all 0.3s ease;
          }
 
-         @media (hover) {
-
-           .pins>li:hover {
-               transform: scale(0.95);
-               opacity: 0.9;
-            }
-
-         }
-
          .pins>li:after {
             content:'';
             display: table;
             clear: both;
          }
 
-         .pins>li>a {
+         .pins>li {
             display: block;
             width: 100%;
             color: black;
          }
 
-         .pins>li>a>.image {
+         .pins>li>.image {
             margin-bottom: 10px;
          }
 
          @media (min-width: 768px) {
 
-           .pins>li>a>.image {
+           .pins>li>.image {
                width: 30%;
                margin-right: 5%;
                margin-bottom: 0;
             }
 
-            .pins>li>a>.text {
+            .pins>li>.text {
                width: 65%;
             }
 
          }
 
-         .pins>li>a>.text>h3 {
+         .pins>li>.text>h3 {
             margin-top:0;
          }
 
-         .pins>li>a>.text>h3>span {
+         .pins>li>.text>h3>span {
             display: inline-block;
             border-radius: 50%;
             line-height: 22px;
@@ -398,23 +363,31 @@
             margin-right: 3px;
          }
 
-         .pins.pink>li>a>.text>h3>span {
+         .pins.pink>li>.text>h3>span {
             background: #feebe9;
             color: black;
          }
 
-         .pins.white>li>a>.text>h3>span {
+         .pins.white>li>.text>h3>span {
             background: white;
             color: black;
          }
 
-         .pins>li>a>.text>p {
+         .pins>li>.text>p {
             max-width: 26em;
          }
 
-         .pins>li>a>.text>span {
+         .pins>li>.text>a {
             font-size: 12px;
             color: #999;
+            text-decoration: none;
+         }
+         
+         .pins>li>.text>a>.btn {
+            border: 1px solid #ddd;
+            margin-left: 5px;
+            font-size: 12px;
+            color: #000;
          }
 
          @keyframes swipe-in {
