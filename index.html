@@ -1,11 +1,356 @@
 <html>
    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4765782-20"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-4765782-20');
+      </script>
+      
       <meta charset="utf-8">
       <meta lang="en">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Insider’s guide to Milan 2018 by Clippings</title>
       <meta name="description" content="">
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+   <style>
+         @font-face {
+             font-family: 'Maison Neue';
+             src: url(fonts/maisonneue-medium.eot);
+             src: url(fonts/maisonneue-medium.eot?#iefix) format('embedded-opentype'),
+                  url(fonts/maisonneue-medium.woff2) format('woff2'),
+                  url(fonts/maisonneue-medium.woff) format('woff'),
+                  url(fonts/maisonneue-medium.ttf) format('truetype'),
+                  url(fonts/maisonneue-medium.svg#maison_neuemedium) format('svg');
+             font-weight: 400;
+             font-style: normal;
+         }
+
+         html, body {
+            height: 100%;
+         }
+
+         body {
+            font-family: 'Maison Neue';
+            color: black;
+            -webkit-font-smoothing: antialiased;
+         }
+
+         h1, h2, h3, h4 {
+            font-weight: 400;
+         }
+         
+         p {
+            max-width: 40em;
+         }
+
+         p.large {
+            font-size: 16px;
+         }
+
+         img {
+            max-width: 100%;
+         }
+
+         h1 {
+            font-size: 4em;
+            line-height: 1em;
+            letter-spacing: -0.05em;
+         }
+
+         .scroller {
+            padding-left:0;
+            padding-right:0;
+         }
+
+         section:not(#map) {
+            display: flex;
+            align-items: center;
+            background: white;
+            z-index: 1;
+         }
+
+         section>div {
+            width: 100%;
+         }
+
+         section#intro>div {
+            padding: 4%;
+         }
+
+         section#intro h1 {
+            margin-top: 60px;
+            animation: fade-up 1s ease 0.3s forwards;
+            transform: translateY(30px); opacity: 0;
+         }
+
+         section#intro>div>p.intro {
+            animation: fade-up 1s ease 0.5s forwards;
+            transform: translateY(30px); opacity: 0;
+         }
+
+         section#intro>div>p {
+            animation: fade-up 1s ease 0.9s forwards;
+            transform: translateY(30px); opacity: 0;
+         }
+
+         @media (min-width: 992px) {
+
+            section#intro>div {
+               padding: 8%;
+            }
+
+         }
+
+         footer {
+            margin-top: 20px;
+            margin-bottom: 0;
+            padding: 20px;
+            background-image: linear-gradient(134deg,#000 0,#859398 100%);
+            color: #fff;
+            z-index: 1;
+            position: relative;
+         }
+
+         @media (min-width: 992px) {
+            footer {
+               padding: 8%;
+            }
+         }
+
+         footer hr {
+            height: 1px;
+            border:0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+         }
+
+         footer p>a.btn {
+            background: #feebe9;
+            color: black;
+            text-decoration: none;
+            border-radius: 2px;
+            margin-top: 10px;
+         }
+
+         form {
+            animation: fade-up 1s ease 0.5s forwards;
+            transform: translateY(30px); opacity: 0;
+            margin-bottom: 40px;
+         }
+
+         form input {
+            height: 40px;
+            line-height: 40px;
+            border: 0;
+            border-radius: 2px;
+            margin-top: 5px;
+         }
+
+         form input[type=email] {
+            border: none;
+            text-indent: 10px;
+            background: #f7f7f7;
+            min-width: 50%;
+            max-width: 230px;
+         }
+
+         form input[type=submit] {
+            padding: 0 20px;
+            background: #feebe9;
+            color: black;
+            padding: 0 20px;
+         }
+
+         form .success {
+            display: none;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 2px;
+            margin-top: 5px;
+            text-align: center;
+            font-size: inherit;
+            padding: 10px 20px;
+            background: #f7f7f7;
+         }
+
+         section#map {
+            padding-left:0;
+            padding-right:0;
+         }
+
+         section#map>iframe {
+            width: 100%;
+            height: 600px;
+            border: 0;
+            z-index: 0;
+            margin-top: -46px;
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+         }
+
+         @media (min-width: 992px) {
+
+            section#map {
+               position: fixed;
+               top:0;
+               right:0;
+               height: 100vh;
+               overflow: hidden;
+            }
+
+            section#map>iframe {
+               height: 108vh;
+               transform: translateX(100%);
+               animation: swipe-in 1s cubic-bezier(0.86, 0, 0.07, 1) 1.5s forwards;
+            }
+
+         }
+
+         section#intro>div>h2 {
+            animation: fade-up 1s ease 0.8s forwards;
+            transform: translateY(30px); opacity: 0;
+         }
+
+         .pins {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 40px;
+            list-style: none;
+            border-top: 1px solid #eee;
+            animation: fade-up 1s ease 1s forwards;
+            transform: translateY(30px); opacity: 0;
+         }
+
+         .pins>li {
+            padding: 20px 0;
+            margin: 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            transition: all 0.3s ease;
+         }
+
+         .pins>li:after {
+            content:'';
+            display: table;
+            clear: both;
+         }
+
+         .pins>li {
+            display: block;
+            width: 100%;
+            color: black;
+         }
+
+         .pins>li>.image {
+            margin-bottom: 10px;
+         }
+
+         @media (min-width: 768px) {
+
+           .pins>li>.image {
+               width: 30%;
+               margin-right: 5%;
+               margin-bottom: 0;
+            }
+
+            .pins>li>.text {
+               width: 65%;
+            }
+
+         }
+
+         .pins>li>.text>h3 {
+            margin-top:0;
+         }
+
+         .pins>li>.text>h3>span {
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 22px;
+            font-size: 12px;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
+            background: black;
+            color: white;
+            position: relative;
+            top: -4px;
+            margin-right: 3px;
+         }
+
+         .pins.pink>li>.text>h3>span {
+            background: #feebe9;
+            color: black;
+         }
+
+         .pins.white>li>.text>h3>span {
+            background: white;
+            color: black;
+         }
+
+         .pins>li>.text>p {
+            max-width: 26em;
+         }
+
+         .pins>li>.text>a {
+            font-size: 12px;
+            color: #999;
+            text-decoration: none;
+         }
+
+         .pins>li>.text>a>.btn {
+            border: 1px solid #ddd;
+            margin-left: 5px;
+            font-size: 12px;
+            color: #000;
+         }
+
+         @keyframes swipe-in {
+            0% {transform: translateX(100%)}
+            100% {transform: translateX(0)}
+         }
+
+         @keyframes fade-up {
+            0% {transform: translateY(30px); opacity:0;}
+            100% {transform: translateY(0); opacity:1;}
+         }
+
+      </style>
+
+      <script>
+         jQuery(".mc-embedded-subscribe-form").submit(function(e) {
+
+             var url = jQuery(this).prop('action'); // the script where you handle the form input.
+             jQuery.ajax({
+                    type: "GET",
+                    url: url,
+                    data: jQuery(".mc-embedded-subscribe-form").serialize(), // serializes the form's elements.
+                    dataType: "jsonp",
+                    success: function(data)
+                    {
+                         if(data.result == 'success') {
+                           $('.mc-embedded-subscribe-form input').hide();
+                           $('.mc-embedded-subscribe-form .success').show();
+                         }
+                    }
+                  });
+
+             e.preventDefault(); // avoid to execute the actual submit of the form.
+         });
+      </script>
+      
    </head>
    <body>
       <main class="container-fluid">
@@ -348,343 +693,5 @@
       <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com --><script>var om41617_36634,om41617_36634_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om41617_36634_poll(function(){if(window['om_loaded']){if(!om41617_36634){om41617_36634=new OptinMonsterApp();return om41617_36634.init({"a":36634,"staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.optmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om41617_36634=new OptinMonsterApp();om41617_36634.init({"a":36634,"staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
 
    </body>
-
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-   <style>
-         @font-face {
-             font-family: 'Maison Neue';
-             src: url(fonts/maisonneue-medium.eot);
-             src: url(fonts/maisonneue-medium.eot?#iefix) format('embedded-opentype'),
-                  url(fonts/maisonneue-medium.woff2) format('woff2'),
-                  url(fonts/maisonneue-medium.woff) format('woff'),
-                  url(fonts/maisonneue-medium.ttf) format('truetype'),
-                  url(fonts/maisonneue-medium.svg#maison_neuemedium) format('svg');
-             font-weight: 400;
-             font-style: normal;
-         }
-
-         html, body {
-            height: 100%;
-         }
-
-         body {
-            font-family: 'Maison Neue';
-            color: black;
-            -webkit-font-smoothing: antialiased;
-         }
-
-         h1, h2, h3, h4 {
-            font-weight: 400;
-         }
-         
-         p {
-            max-width: 40em;
-         }
-
-         p.large {
-            font-size: 16px;
-         }
-
-         img {
-            max-width: 100%;
-         }
-
-         h1 {
-            font-size: 4em;
-            line-height: 1em;
-            letter-spacing: -0.05em;
-         }
-
-         .scroller {
-            padding-left:0;
-            padding-right:0;
-         }
-
-         section:not(#map) {
-            display: flex;
-            align-items: center;
-            background: white;
-            z-index: 1;
-         }
-
-         section>div {
-            width: 100%;
-         }
-
-         section#intro>div {
-            padding: 4%;
-         }
-
-         section#intro h1 {
-            margin-top: 60px;
-            animation: fade-up 1s ease 0.3s forwards;
-            transform: translateY(30px); opacity: 0;
-         }
-
-         section#intro>div>p.intro {
-            animation: fade-up 1s ease 0.5s forwards;
-            transform: translateY(30px); opacity: 0;
-         }
-
-         section#intro>div>p {
-            animation: fade-up 1s ease 0.9s forwards;
-            transform: translateY(30px); opacity: 0;
-         }
-
-         @media (min-width: 992px) {
-
-            section#intro>div {
-               padding: 8%;
-            }
-
-         }
-
-         footer {
-            margin-top: 20px;
-            margin-bottom: 0;
-            padding: 20px;
-            background-image: linear-gradient(134deg,#000 0,#859398 100%);
-            color: #fff;
-            z-index: 1;
-            position: relative;
-         }
-
-         @media (min-width: 992px) {
-            footer {
-               padding: 8%;
-            }
-         }
-
-         footer hr {
-            height: 1px;
-            border:0;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-         }
-
-         footer p>a.btn {
-            background: #feebe9;
-            color: black;
-            text-decoration: none;
-            border-radius: 2px;
-            margin-top: 10px;
-         }
-
-         form {
-            animation: fade-up 1s ease 0.5s forwards;
-            transform: translateY(30px); opacity: 0;
-            margin-bottom: 40px;
-         }
-
-         form input {
-            height: 40px;
-            line-height: 40px;
-            border: 0;
-            border-radius: 2px;
-            margin-top: 5px;
-         }
-
-         form input[type=email] {
-            border: none;
-            text-indent: 10px;
-            background: #f7f7f7;
-            min-width: 50%;
-            max-width: 230px;
-         }
-
-         form input[type=submit] {
-            padding: 0 20px;
-            background: #feebe9;
-            color: black;
-            padding: 0 20px;
-         }
-
-         form .success {
-            display: none;
-            height: 50px;
-            line-height: 50px;
-            border-radius: 2px;
-            margin-top: 5px;
-            text-align: center;
-            font-size: inherit;
-            padding: 10px 20px;
-            background: #f7f7f7;
-         }
-
-         section#map {
-            padding-left:0;
-            padding-right:0;
-         }
-
-         section#map>iframe {
-            width: 100%;
-            height: 600px;
-            border: 0;
-            z-index: 0;
-            margin-top: -46px;
-            filter: grayscale(100%);
-            -webkit-filter: grayscale(100%);
-         }
-
-         @media (min-width: 992px) {
-
-            section#map {
-               position: fixed;
-               top:0;
-               right:0;
-               height: 100vh;
-               overflow: hidden;
-            }
-
-            section#map>iframe {
-               height: 108vh;
-               transform: translateX(100%);
-               animation: swipe-in 1s cubic-bezier(0.86, 0, 0.07, 1) 1.5s forwards;
-            }
-
-         }
-
-         section#intro>div>h2 {
-            animation: fade-up 1s ease 0.8s forwards;
-            transform: translateY(30px); opacity: 0;
-         }
-
-         .pins {
-            width: 100%;
-            padding: 0;
-            margin-bottom: 40px;
-            list-style: none;
-            border-top: 1px solid #eee;
-            animation: fade-up 1s ease 1s forwards;
-            transform: translateY(30px); opacity: 0;
-         }
-
-         .pins>li {
-            padding: 20px 0;
-            margin: 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            width: 100%;
-            transition: all 0.3s ease;
-         }
-
-         .pins>li:after {
-            content:'';
-            display: table;
-            clear: both;
-         }
-
-         .pins>li {
-            display: block;
-            width: 100%;
-            color: black;
-         }
-
-         .pins>li>.image {
-            margin-bottom: 10px;
-         }
-
-         @media (min-width: 768px) {
-
-           .pins>li>.image {
-               width: 30%;
-               margin-right: 5%;
-               margin-bottom: 0;
-            }
-
-            .pins>li>.text {
-               width: 65%;
-            }
-
-         }
-
-         .pins>li>.text>h3 {
-            margin-top:0;
-         }
-
-         .pins>li>.text>h3>span {
-            display: inline-block;
-            border-radius: 50%;
-            line-height: 22px;
-            font-size: 12px;
-            height: 20px;
-            width: 20px;
-            text-align: center;
-            box-shadow: 0px 0px 6px rgba(0,0,0,0.4);
-            background: black;
-            color: white;
-            position: relative;
-            top: -4px;
-            margin-right: 3px;
-         }
-
-         .pins.pink>li>.text>h3>span {
-            background: #feebe9;
-            color: black;
-         }
-
-         .pins.white>li>.text>h3>span {
-            background: white;
-            color: black;
-         }
-
-         .pins>li>.text>p {
-            max-width: 26em;
-         }
-
-         .pins>li>.text>a {
-            font-size: 12px;
-            color: #999;
-            text-decoration: none;
-         }
-
-         .pins>li>.text>a>.btn {
-            border: 1px solid #ddd;
-            margin-left: 5px;
-            font-size: 12px;
-            color: #000;
-         }
-
-         @keyframes swipe-in {
-            0% {transform: translateX(100%)}
-            100% {transform: translateX(0)}
-         }
-
-         @keyframes fade-up {
-            0% {transform: translateY(30px); opacity:0;}
-            100% {transform: translateY(0); opacity:1;}
-         }
-
-      </style>
-
-      <script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-5GJVRCR&amp;cid=2124603353.1510187677&amp;gac=_gaexp%3DGAX1.2.9Z8Q6395R9uTCSkYDX0UFg.17683.1"></script>
-      <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PKTZ44"></script>
-      <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-
-      <script>
-         jQuery(".mc-embedded-subscribe-form").submit(function(e) {
-
-             var url = jQuery(this).prop('action'); // the script where you handle the form input.
-             jQuery.ajax({
-                    type: "GET",
-                    url: url,
-                    data: jQuery(".mc-embedded-subscribe-form").serialize(), // serializes the form's elements.
-                    dataType: "jsonp",
-                    success: function(data)
-                    {
-                         if(data.result == 'success') {
-                           $('.mc-embedded-subscribe-form input').hide();
-                           $('.mc-embedded-subscribe-form .success').show();
-                         }
-                    }
-                  });
-
-             e.preventDefault(); // avoid to execute the actual submit of the form.
-         });
-      </script>
 
 </html>
