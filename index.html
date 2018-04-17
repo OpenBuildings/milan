@@ -25,11 +25,11 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PKTZ44');</script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-   <style>
+      <style>
          @font-face {
              font-family: 'Maison Neue';
              src: url(fonts/maisonneue-medium.eot);
@@ -335,28 +335,6 @@
          }
 
       </style>
-
-      <script>
-         jQuery(".mc-embedded-subscribe-form").submit(function(e) {
-
-             var url = jQuery(this).prop('action'); // the script where you handle the form input.
-             jQuery.ajax({
-                    type: "GET",
-                    url: url,
-                    data: jQuery(".mc-embedded-subscribe-form").serialize(), // serializes the form's elements.
-                    dataType: "jsonp",
-                    success: function(data)
-                    {
-                         if(data.result == 'success') {
-                           $('.mc-embedded-subscribe-form input').hide();
-                           $('.mc-embedded-subscribe-form .success').show();
-                         }
-                    }
-                  });
-
-             e.preventDefault(); // avoid to execute the actual submit of the form.
-         });
-      </script>
       
    </head>
    <body>
@@ -696,6 +674,28 @@
          </div>
 
       </main>
+      
+      <script>
+         jQuery(".mc-embedded-subscribe-form").submit(function(e) {
+
+             var url = jQuery(this).prop('action'); // the script where you handle the form input.
+             jQuery.ajax({
+                    type: "GET",
+                    url: url,
+                    data: jQuery(".mc-embedded-subscribe-form").serialize(), // serializes the form's elements.
+                    dataType: "jsonp",
+                    success: function(data)
+                    {
+                         if(data.result == 'success') {
+                           $('.mc-embedded-subscribe-form input').hide();
+                           $('.mc-embedded-subscribe-form .success').show();
+                         }
+                    }
+                  });
+
+             e.preventDefault(); // avoid to execute the actual submit of the form.
+         });
+      </script>
 
       <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com --><script>var om41617_36634,om41617_36634_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om41617_36634_poll(function(){if(window['om_loaded']){if(!om41617_36634){om41617_36634=new OptinMonsterApp();return om41617_36634.init({"a":36634,"staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.optmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om41617_36634=new OptinMonsterApp();om41617_36634.init({"a":36634,"staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
 
